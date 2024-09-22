@@ -55,10 +55,17 @@ const generateImage = async (prompt) => {
       size: "1024x1024",  // Image dimensions
     });
 
-    return {
-      success: true,
-      url: response.data.data[0].url,  // URL of the generated image
-    };
+    console.log("Respnose from OpenAI:", response);
+
+    // Check if response contains image data
+    if (response && response.data && Array.isArray(response.data) && response.data.length > 0 && response.data[0].url) {
+      return {
+        success: true,
+        url: response.data[0].url,
+      };
+    } else {
+      throw new Error("No image data returned");
+    }
   } catch (error) {
     console.error("Error generating image:", error);  // Log the entire error for better debugging
     return {
