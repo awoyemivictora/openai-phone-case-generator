@@ -1,2 +1,6 @@
 .env
 node_modules
+old_developer
+certificate.crt
+certificate.pem
+private.key.pem 
