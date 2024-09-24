@@ -5,6 +5,7 @@ const httpsAgent = new https.Agent({
   rejectUnauthorized: false, // Bypass SSL certificate verification
 });
 
+
 async function uploadImageToPrintify(imageUrl) {
   const apiToken = process.env.PRINTIFY_API_KEY;
 
