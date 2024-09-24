@@ -117,6 +117,9 @@ const express = require("express");
 const { generateImage } = require("../openAiImageGeneration");
 const { uploadImageToPrintify, createPrintifyProduct } = require("../printifyApi");
 
+const cors = require('cors');
+app.use(cors({ origin: 'https://www.abetterlife.info/' })); // Replace with your actual Wix site URL
+
 const app = express();
 app.use(express.json());
 
