@@ -29,6 +29,7 @@ Before you begin, ensure you have the following installed on your machine:
 
 ## Getting Started
 
+
 1. Clone the repository:
     ```bash
     git clone https://github.com/yourusername/phone-case-backend.git
@@ -68,3 +69,5 @@ The backend exposes the following API endpoints:
 {
   "prompt": "Your design prompt"
 }
+# openai-phone-case-generator
+# openai-phone-case-generator
